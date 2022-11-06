@@ -5,11 +5,11 @@ const Error = () => {
   console.log(error);
 
   return (
-    <div>
+    <div className="error">
       <h1>Oops!!</h1>
       <p>Sorry, an unexpected error has occured</p>
-      <p>
-        <i>{`${error.statusText} ${error.status}`}</i>
+      <p className="error-message">
+        <i>{`${error.statusText} | ${error.status}`}</i>
       </p>
     </div>
   );

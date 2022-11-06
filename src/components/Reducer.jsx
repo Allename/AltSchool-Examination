@@ -1,24 +1,31 @@
-const Reducer = (state, action) => {
+export const reducer = (state, action) => {
   switch (action.type) {
-    case "INCREMENT": {
+    case "INCREASE": {
       return {
         count: state.count + 1,
       };
     }
-    case "DECREMENT": {
+
+    case "DECREASE": {
+      if (state.count !== 0) {
+        return {
+          count: state.count - 1,
+        };
+      }
+
       return {
-        count: state.count - 1,
-      };
+        count: 0
+      }
     }
+
     case "RESET": {
       return {
         count: 0,
       };
     }
+
     default: {
-      throw Error("Unknown action: " + action.type);
+      console.log('def')
     }
   }
 };
-
-export default Reducer;
