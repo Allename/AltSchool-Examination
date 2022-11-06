@@ -9,7 +9,7 @@ const Error = () => {
       <h1>Oops!!</h1>
       <p>Sorry, an unexpected error has occured</p>
       <p>
-        <i>{`${error.statusText} ${error.statusCode}`}</i>
+        <i>{`${error.statusText} ${error.status}`}</i>
       </p>
     </div>
   );
